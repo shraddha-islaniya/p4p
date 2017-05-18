@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Manav Misra -- Desinger/Developer -- @manavm1990
+
+# THANKS
+
+    
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    jQuery, Modernizr
+    Bootstrap, Picturefill

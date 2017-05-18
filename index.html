@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Pound 4 Pound Fitness Center</title>
+  <meta name="description" content="Pound 4 Pound Fitness Center is a state-of-the-art workout facility featuring locker rooms, a women's only workout area, free classes for members, personal trainers, Poliquin products, a dry sauna, 24-hour access and more.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/p4p.min.css">
+
+  <script src="js/vendor/modernizr.custom.93527.js"></script>
+
+  <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+  <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+  <header>
+    <div class="container">
+      <nav class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+
+            <!--'Expand' icon for 'small' screens, where navbar collapses. -->
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <!--Branding stays and menu becomes expandable on 'small' screens. -->
+          <a class="navbar-brand logo" href="#"><h1 class="text-hide">Pound 4 Pound Fitness Center logo</h1></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="classes.html">Classes</a></li>
+            <li><a href="http://noregrets.fit" target="_blank">Trainers</a></li>
+            <li><a href="poliquin.html">Poliquin</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+
+          <a href="http://main.poliquinstore.com/"><img src="img/poliquin.png" alt="Click here to order top quality Poliquin supplements"
+             class="img-responsive poliquin" /></a>
+
+          <address class="pull-left">
+            <a href="https://www.google.com/maps/preview#!q=725+Station+Crossing+Waterloo+IL+62298&data=!4m15!2m14!1m13!1s0x87d8bd3afddf96a7%3A0x30076b1797d5d014!3m8!1m3!1d3783885!2d-89.2665069!3d39.739318!3m2!1i1680!2i925!4f13.1!4m2!3d38.345773!4d-90.161124"><strong>725 Station Crossing&nbsp;&bull;&nbsp;</strong>Waterloo, IL 62298&nbsp;&bull;&nbsp;</a>
+            <a
+              href="tel:+16189395004"><strong>618.939.5004</strong></a>
+          </address>
+        </div>
+        <!-- /.navbar-collapse -->
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>You're invited...</h1>
+    <p class="lead">...to come experience the area's most state-of-the-art workout facility.</p>
+    <p>Just stop by or give us a call to find out more about our wide variety of equipment
+      and amenities.</p>
+
+    <!--This list acts as a pseudo-thumbnail gallery. The focus is the 'textual' content, and therefore a list is used, with background images. Unlike a traditional thumbnail gallery, the focus, in terms of content is the text, and some of the corresponding modals may show larger images, but we do not use traditional thumbnail images in the HTML b/c the images themselves are not the content focus. -->
+    <div class="row">
+      <!--.row holds pseudo-thumbnails .md-8 and the schedule table in md-4. -->
+      <div class="col-sm-4">
+        <div class="row">
+          <div class="table-responsive col-sm-11 col-sm-offset-1">
+            <!--Create responsive tables by wrapping any .table in .table-responsive... -->
+            <table class="table table-condensed">
+              <caption class="text-left">Staffed Hours&nbsp;&bull;&nbsp;<em>Members have 24-Hour Access</em></caption>
+              <tr>
+                <td>Mon.- Thu.</td>
+                <td>10:00A - 6:30P</td>
+              </tr>
+
+              <tr>
+                <td>Fri.</td>
+                <td>10:00A - 4:00P</td>
+              </tr>
+
+              <tr>
+                <td>Sat.</td>
+                <td>9:00A - 12:00P</td>
+              </tr>
+            </table>
+          </div>
+          <!--/.table-responsive -->
+        </div>
+        <!--/.row -->
+
+        <div class="row">
+          <div class="map-canvas col-sm-11 col-sm-offset-1" id="map-canvas"></div>
+        </div>
+        <!--/.row -->
+
+      </div>
+      <!--/.col-md-4 -->
+
+      <ul class="list-inline col-sm-8">
+        <li>
+          <a class="list-href" href="#" data-toggle="modal" data-target="#cardModal"></a><span>24 Hr. Access</span></li>
+        <li>
+          <a class="list-href women-only" href="#" data-toggle="modal" data-target="#womenModal"></a><span>Women's Only Area</span></li>
+        <li>
+          <a class="list-href ex-rm" href="#" data-toggle="modal" data-target="#exModal"></a><span>Exercise Room</span></li>
+        <li>
+          <a class="list-href saunas" href="#" data-toggle="modal" data-target="#saunaModal"></a><span>Saunas</span></li>
+        <li>
+          <a class="list-href cardio" href="#" data-toggle="modal" data-target="#cardioModal"></a><span>Full Line of Cardio</span></li>
+        <li>
+          <a class="list-href sq-ft" href="#" data-toggle="modal" data-target="#sqftModal"></a><span>10K+ Sq. Ft. Facility</span></li>
+        <li>
+          <a class="list-href trainers" href="#" data-toggle="modal" data-target="#trainersModal"></a><span>Certified Trainers</span></li>
+        <li>
+          <a class="list-href lockers" href="#" data-toggle="modal" data-target="#lockerModal"></a><span>Locker Rooms</span></li>
+      </ul>
+    </div>
+    <!--/.row -->
+
+    <div id="p4p-carousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#p4p-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#p4p-carousel" data-slide-to="1"></li>
+        <li data-target="#p4p-carousel" data-slide-to="2"></li>
+        <li data-target="#p4p-carousel" data-slide-to="3"></li>
+        <li data-target="#p4p-carousel" data-slide-to="4"></li>
+        <li data-target="#p4p-carousel" data-slide-to="5"></li>
+        <li data-target="#p4p-carousel" data-slide-to="6"></li>
+        <li data-target="#p4p-carousel" data-slide-to="7"></li>
+        <li data-target="#p4p-carousel" data-slide-to="8"></li>
+        <li data-target="#p4p-carousel" data-slide-to="9"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <span data-picture data-alt="Atlantis weights">
+                    <span data-src="img/carousel/atlantis.jpg"></span>
+          <span data-src="img/carousel/atlantis@2x.jpg" data-media="(min-resolution: 2dppx)"></span>
+          <span data-src="img/carousel/med/atlantis.jpg" data-media="(min-width: 768px)"></span>
+          <span data-src="img/carousel/med/atlantis@2x.jpg" data-media="(min-width: 768px) and (min-resolution: 2dppx)"></span>
+          <span data-src="img/carousel/lrg/atlantis.jpg" data-media="(min-width: 992px)"></span>
+          <span data-src="img/carousel/lrg/atlantis@2x.jpg" data-media="(min-width: 992px) and (min-resolution: 2dppx)"></span>
+
+          <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+          <noscript>
+            <img src="img/carousel/atlantis.jpg" alt="Atlantis weights">
+          </noscript>
+          </span>
+        </div>
+        <!--/.item -->
+
+        <div class="item">
+          <span data-picture data-alt="Cardio equipment">
+                    <span data-src="img/carousel/cardio1.jpg"></span>
+          <span data-src="img/carousel/cardio1@2x.jpg" data-media="(min-resolution: 2dppx)"></span>
+          <span data-src="img/carousel/med/cardio1.jpg" data-media="(min-width: 768px)"></span>
+          <span data-src="img/carousel/med/cardio1@2x.jpg" data-media="(min-width: 768px) and (min-resolution: 2dppx)"></span>
+          <span data-src="img/carousel/lrg/cardio1.jpg" data-media="(min-width: 992px)"></span>
+          <span data-src="img/carousel/lrg/cardio1@2x.jpg" data-media="(min-width: 992px) and (min-resolution: 2dppx)"></span>
+
+          <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+          <noscript>
+            <img src="img/carousel/cardio1.jpg" alt="Cardio equipment">
+          </noscript>
+          </span>
+        </div>
+        <!--/.item -->
+
+        <div class="item">
+          <span data-picture data-alt="Cardio equipment">
+                    <span data-src="img/carousel/cardio2.jpg"></span>
+          <span data-src="img/carousel/cardio2@2x.jpg" data-media="(min-resolution: 2dppx)"></span>
+          <span data-src="img/carousel/med/cardio2.jpg" data-media="(min-width: 768px)"></span>
+          <span data-src="img/carousel/med/cardio2@2x.jpg" data-media="(min-width: 768px) and (min-resolution: 2dppx)"></span>
+          <span data-src="img/carousel/lrg/cardio2.jpg" data-media="(min-width: 992px)"></span>
+          <span data-src="img/carousel/lrg/cardio2@2x.jpg" data-media="(min-width: 992px) and (min-resolution: 2dppx)"></span>
+
+          <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+          <noscript>
+            <img src="img/carousel/cardio2.jpg" alt="Cardio equipment">
+          </noscript>
+          </span>
+        </div>
+        <!--/.item -->
+
+        <div class="item">
+          <span data-picture data-alt="Cardio equipment">
+                    <span data-src="img/carousel/cardio3.jpg"></span>
+          <span data-src="img/carousel/cardio3@2x.jpg" data-media="(min-resolution: 2dppx)"></span>
+          <span data-src="img/carousel/med/cardio3.jpg" data-media="(min-width: 768px)"></span>
+          <span data-src="img/carousel/med/cardio3@2x.jpg" data-media="(min-width: 768px) and (min-resolution: 2dppx)"></span>
+          <span data-src="img/carousel/lrg/cardio3.jpg" data-media="(min-width: 992px)"></span>
+          <span data-src="img/carousel/lrg/cardio3@2x.jpg" data-media="(min-width: 992px) and (min-resolution: 2dppx)"></span>
+
+          <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+          <noscript>
+            <img src="img/carousel/cardio3.jpg" alt="Cardio equipment">
+          </noscript>
+          </span>
+        </div>
+        <!--/.item -->
+
+        <div class="item">
+          <span data-picture data-alt="Cardio equipment">
+                    <span data-src="img/carousel/cardio4.jpg"></span>
+          <span data-src="img/carousel/cardio4@2x.jpg" data-media="(min-resolution: 2dppx)"></span>
+          <span data-src="img/carousel/med/cardio4.jpg" data-media="(min-width: 768px)"></span>
+          <span data-src="img/carousel/med/cardio4@2x.jpg" data-media="(min-width: 768px) and (min-resolution: 2dppx)"></span>
+          <span data-src="img/carousel/lrg/cardio4.jpg" data-media="(min-width: 992px)"></span>
+          <span data-src="img/carousel/lrg/cardio4@2x.jpg" data-media="(min-width: 992px) and (min-resolution: 2dppx)"></span>
+
+          <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+          <noscript>
+            <img src="img/carousel/cardio4.jpg" alt="Cardio equipment">
+          </noscript>
+          </span>
+        </div>
+        <!--/.item -->
+
+        <div class="item">
+          <span data-picture data-alt="Decline bench and various other weight equipment.">
+                    <span data-src="img/carousel/decline-bench1.jpg"></span>
+          <span data-src="img/carousel/decline-bench1@2x.jpg" data-media="(min-resolution: 2dppx)"></span>
+          <span data-src="img/carousel/med/decline-bench1.jpg" data-media="(min-width: 768px)"></span>
+          <span data-src="img/carousel/med/decline-bench1@2x.jpg" data-media="(min-width: 768px) and (min-resolution: 2dppx)"></span>
+          <span data-src="img/carousel/lrg/decline-bench1.jpg" data-media="(min-width: 992px)"></span>
+          <span data-src="img/carousel/lrg/decline-bench1@2x.jpg" data-media="(min-width: 992px) and (min-resolution: 2dppx)"></span>
+
+          <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+          <noscript>
+            <img src="img/carousel/decline-bench1.jpg" alt="Decline bench and various other weight equipment.">
+          </noscript>
+          </span>
+        </div>
+        <!--/.item -->
+
+        <div class="item">
+          <span data-picture data-alt="Dumbbells">
+                    <span data-src="img/carousel/dumb1.jpg"></span>
+          <span data-src="img/carousel/dumb1@2x.jpg" data-media="(min-resolution: 2dppx)"></span>
+          <span data-src="img/carousel/med/dumb1.jpg" data-media="(min-width: 768px)"></span>
+          <span data-src="img/carousel/med/dumb1@2x.jpg" data-media="(min-width: 768px) and (min-resolution: 2dppx)"></span>
+          <span data-src="img/carousel/lrg/dumb1.jpg" data-media="(min-width: 992px)"></span>
+          <span data-src="img/carousel/lrg/dumb1@2x.jpg" data-media="(min-width: 992px) and (min-resolution: 2dppx)"></span>
+
+          <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+          <noscript>
+            <img src="img/carousel/dumb1.jpg" alt="Dumbbells">
+          </noscript>
+          </span>
+        </div>
+        <!--/.item -->
+
+        <div class="item">
+          <span data-picture data-alt="Dumbbells">
+                    <span data-src="img/carousel/dumb2.jpg"></span>
+          <span data-src="img/carousel/dumb2@2x.jpg" data-media="(min-resolution: 2dppx)"></span>
+          <span data-src="img/carousel/med/dumb2.jpg" data-media="(min-width: 768px)"></span>
+          <span data-src="img/carousel/med/dumb2@2x.jpg" data-media="(min-width: 768px) and (min-resolution: 2dppx)"></span>
+          <span data-src="img/carousel/lrg/dumb2.jpg" data-media="(min-width: 992px)"></span>
+          <span data-src="img/carousel/lrg/dumb2@2x.jpg" data-media="(min-width: 992px) and (min-resolution: 2dppx)"></span>
+          <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+          <noscript>
+            <img src="img/carousel/dumb2.jpg" alt="Dumbbells">
+          </noscript>
+          </span>
+        </div>
+        <!--/.item -->
+
+        <div class="item">
+          <span data-picture data-alt="Dumbbells">
+                    <span data-src="img/carousel/dumb3.jpg"></span>
+          <span data-src="img/carousel/dumb3@2x.jpg" data-media="(min-resolution: 2dppx)"></span>
+          <span data-src="img/carousel/med/dumb3.jpg" data-media="(min-width: 768px)"></span>
+          <span data-src="img/carousel/med/dumb3@2x.jpg" data-media="(min-width: 768px) and (min-resolution: 2dppx)"></span>
+          <span data-src="img/carousel/lrg/dumb3.jpg" data-media="(min-width: 992px)"></span>
+          <span data-src="img/carousel/lrg/dumb3@2x.jpg" data-media="(min-width: 992px) and (min-resolution: 2dppx)"></span>
+
+          <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+          <noscript>
+            <img src="img/carousel/dumb3.jpg" alt="Dumbbells">
+          </noscript>
+          </span>
+        </div>
+        <!--/.item -->
+
+        <div class="item">
+          <span data-picture data-alt="Elliptical cardio machines">
+                    <span data-src="img/carousel/elliptical1.jpg"></span>
+          <span data-src="img/carousel/elliptical1@2x.jpg" data-media="(min-resolution: 2dppx)"></span>
+          <span data-src="img/carousel/med/elliptical1.jpg" data-media="(min-width: 768px)"></span>
+          <span data-src="img/carousel/med/elliptical1@2x.jpg" data-media="(min-width: 768px) and (min-resolution: 2dppx)"></span>
+          <span data-src="img/carousel/lrg/elliptical1.jpg" data-media="(min-width: 992px)"></span>
+          <span data-src="img/carousel/lrg/elliptical1@2x.jpg" data-media="(min-width: 992px) and (min-resolution: 2dppx)"></span>
+
+          <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+          <noscript>
+            <img src="img/carousel/elliptical1.jpg" alt="Elliptical cardio machines.">
+          </noscript>
+          </span>
+        </div>
+        <!--/.item -->
+
+      </div>
+      <!--/.carousel-inner -->
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="#p4p-carousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a class="right carousel-control" href="#p4p-carousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <ul class="list-inline">
+        <li><a href="#">Home</a></li>
+        <li><a href="classes.html">Classes</a></li>
+        <li><a href="http://noregrets.fit" target="_blank">Trainers</a></li>
+        <li><a href="poliquin.html">Poliquin</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="https://www.google.com/maps/preview#!q=725+Station+Crossing+Waterloo+IL+62298&data=!4m15!2m14!1m13!1s0x87d8bd3afddf96a7%3A0x30076b1797d5d014!3m8!1m3!1d3783885!2d-89.2665069!3d39.739318!3m2!1i1680!2i925!4f13.1!4m2!3d38.345773!4d-90.161124">725 Station Crossing&nbsp;&bull;&nbsp;Waterloo, IL 62298</a></li>
+        <li><a href="tel:+16189395004">618.939.5004</a></li>
+        <li><small>Website by:&nbsp;<a href="http://www.visionwebsoft.com">Vision WebSoft</a></small></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal fade" id="cardModal" tabindex="-1" role="dialog" aria-labelledby="cardModalLabel"
+   aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h1 class="modal-title" id="cardModalLabel">24-Hour Member Access</h1>
+        </div>
+        <!--/.modal-header -->
+        <div class="modal-body">
+          <p>Members may purchase a keycard that they can then use to gain 24-hour access
+            to the facility. It doesn't get much more convenient than that!</p>
+        </div>
+        <!--/.modal-body -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+        </div>
+        <!--/.modal-footer -->
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="womenModal" tabindex="-1" role="dialog" aria-labelledby="womenModalLabel"
+   aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h1 class="modal-title" id="womenModalLabel">Women's Only Area</h1>
+        </div>
+        <!--/.modal-header -->
+        <div class="modal-body">
+          <p>Women may choose to workout with more privacy in the 'Women's Only Area.'</p>
+          <figure><img class="img-responsive img-rounded" src="img/carousel/women4.jpg" alt="Women's Only Workout Area"></figure>
+        </div>
+        <!--/.modal-body -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+        </div>
+        <!--/.modal-footer -->
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="exModal" tabindex="-1" role="dialog" aria-labelledby="exModalLabel"
+   aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h1 class="modal-title" id="exModalLabel">Exercise Room</h1>
+        </div>
+        <!--/.modal-header -->
+        <div class="modal-body">
+          <p>Our exercise room allows you to fit in all types of activities into your
+            workouts. We also offer <a href="classes.html"><strong>FREE fitness classes</strong></a>            for members.</p>
+          <figure><img class="img-responsive img-rounded" src="img/gallery/ex-rm1.jpg" alt="Exercise Room"></figure>
+        </div>
+        <!--/.modal-body -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+        </div>
+        <!--/.modal-footer -->
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="saunaModal" tabindex="-1" role="dialog" aria-labelledby="saunaModalLabel"
+   aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h1 class="modal-title" id="saunaModalLabel">Dry Saunas</h1>
+        </div>
+        <!--/.modal-header -->
+        <div class="modal-body">
+          <p>Our members love our dry saunas...perfect after a hard workout for relaxing
+            the muscles, or anytime to help destress.</p>
+          <figure><img class="img-responsive img-rounded" src="img/gallery/sauna1.jpg" alt=""></figure>
+        </div>
+        <!--/.modal-body -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+        </div>
+        <!--/.modal-footer -->
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="cardioModal" tabindex="-1" role="dialog" aria-labelledby="cardioModalLabel"
+   aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h1 class="modal-title" id="cardioModalLabel">A Full Line of Cardio Equipment</h1>
+        </div>
+        <!--/.modal-header -->
+        <div class="modal-body">
+          <p>Plentiful cardio equipment means you won't be waiting around. Just hop
+            on and get moving!</p>
+          <figure><img class="img-responsive img-rounded" src="img/carousel/cardio3.jpg"
+             alt="Cardio equipment"></figure>
+        </div>
+        <!--/.modal-body -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+        </div>
+        <!--/.modal-footer -->
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="sqftModal" tabindex="-1" role="dialog" aria-labelledby="sqftModalLabel"
+   aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h1 class="modal-title" id="sqftModalLabel">Our facility is over 10,000 sq. ft.</h1>
+        </div>
+        <!--/.modal-header -->
+        <div class="modal-body">
+          <p>You'd be hard-pressed to find a collection of fitness and weight equipment
+            as you will find at our facility. Having such a variety of top-notch
+            equipment will help you constantly re-invent your workouts and avoid
+            getting bored.</p>
+          <figure><img class="img-responsive img-rounded" src="img/carousel/gym1.jpg" alt="10,000 sq. ft. of fitness and weight equipment."></figure>
+        </div>
+        <!--/.modal-body -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+        </div>
+        <!--/.modal-footer -->
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="trainersModal" tabindex="-1" role="dialog" aria-labelledby="trainersModalLabel"
+   aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h1 class="modal-title" id="trainersModalLabel">Poliquin Certified Personal Trainers</h1>
+        </div>
+        <!--/.modal-header -->
+        <div class="modal-body">
+          <p>Our certified personal trainers, Bill &amp; Scott Gray, have almost 25
+            years of combined athletic training experience! In addition, they hold
+            numerous certifications, including: <a href="http://www.poliquingroup.com/"
+             target="_blank">Poliquin</a> Bio-Signature Practitioner and PICP certifications.</p>
+        </div>
+        <!--/.modal-body -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+        </div>
+        <!--/.modal-footer -->
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="lockerModal" tabindex="-1" role="dialog" aria-labelledby="lockerModalLabel"
+   aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h1 class="modal-title" id="lockerModalLabel">Locker Rooms</h1>
+        </div>
+        <!--/.modal-header -->
+        <div class="modal-body">
+          <figure><img class="img-responsive img-rounded" src="img/gallery/locker.jpg" alt="Restroom with lockers, sauna and private showers."></figure>
+        </div>
+        <!--/.modal-body -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+        </div>
+        <!--/.modal-footer -->
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script>
+    window.jQuery || document.write(
+      '<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')
+  </script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+  <script src="js/vendor/picturefill/picturefill.min.js"></script>
+  <!--        <script src="js/vendor/picturefill/picturefill.js"></script>-->
+  <script src="js/vendor/picturefill/matchmedia.min.js"></script>
+  <!--        <script src="js/vendor/picturefill/matchmedia.js"></script>-->
+
+  <script src="js/plugins.min.js"></script>
+  <!--        <script src="js/plugins.js"></script>-->
+
+  <script src="js/p4p.min.js"></script>
+  <!--        <script src="js/p4p.js"></script>-->
+
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+  <script>
+    var map;
+
+    function initialize() {
+      var latlngPos = new google.maps.LatLng(38.345773, -90.161124);
+      var mapOptions = {
+        zoom: 16,
+        center: latlngPos,
+        mapTypeId: google.maps.MapTypeId.HYBRID,
+        streetViewControl: false // remove 'Pegman'  
+      };
+      map = new google.maps.Map(document.getElementById('map-canvas'),
+        mapOptions);
+      var marker = new google.maps.Marker({
+        position: latlngPos,
+        map: map,
+        title: "P4P Fitness"
+      });
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+</body>
+
+</html>
